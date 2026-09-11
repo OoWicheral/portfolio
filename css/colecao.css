@@ -174,6 +174,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   border-left: 2px solid var(--ink);
   padding: 0 var(--pad) 54px 26px; 
   width: 100%;
+  font-size: 1.5rem;
 }
 
 .timeline-dot { 
@@ -199,24 +200,31 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 
 .timeline-media-grid { 
   display: grid; 
-  grid-template-columns: minmax(180px, 280px) 1fr; 
-  gap: 14px 22px; 
-  align-items: center; 
+  grid-template-columns: minmax(220px, 340px) 1fr; 
+  gap: 24px; 
+  align-items: start; 
   margin-top: 20px; 
+}
+
+.media-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* Coloca uma imagem em cima da outra */
+  gap: 12px;
+  width: 100%;
 }
 
 .rounded-media { 
   background: #ecebe8; 
   color: #333; 
-  aspect-ratio: 1.15; 
-  border-radius: 24px; 
+  aspect-ratio: 1.6; /* Deixa a imagem mais retangular na na horizontal */
+  border-radius: 16px; 
   display: grid; 
   place-items: center; 
   font-size: 12px; 
   overflow: hidden; 
+  width: 100%;
 }
 .dark-card .rounded-media { background: #f0efed; }
-
 .button { 
   display: inline-flex; 
   background: #181818; 

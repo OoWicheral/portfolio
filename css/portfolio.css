@@ -59,7 +59,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   color: var(--white);
   padding: 90px var(--pad) 48px;
   display: grid;
-  grid-template-columns: 1fr minmax(220px, 500px) 1fr;
+  grid-template-columns: 1fr minmax(220px, 800px) 1fr;
   align-items: center;
   gap: clamp(32px, 5vw, 80px);
 }
@@ -77,10 +77,10 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 
 .portrait-placeholder {
   width: 100%;
-  height: min(70svh, 720px);
+  height: 100%;
   min-height: 420px;
   justify-self: center;
-  background: #dedede url('assets/pedro.jpg') center 18% / cover no-repeat;
+  background: url('../assets/foto-hero.jpeg') center 18% / cover no-repeat;
   color: var(--ink);
   display: grid;
   place-items: end center;
@@ -225,13 +225,16 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   width: 40%;
 }
 .placeholder-media::before {
-  content: 'Imagem do projeto';
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
   color: var(--ink);
   font-size: 14px;
+}
+
+#pokemon-image {
+  background-image: url('/assets/pokemon-index.png');
 }
 .project-content {
   min-height: 100%;
