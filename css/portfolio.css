@@ -222,16 +222,9 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   background: #dcdcdc;
   position: relative;
   overflow: hidden;
-  width: 40%;
+  width: 80%;
 }
-.placeholder-media::before {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: var(--ink);
-  font-size: 14px;
-}
+
 
 #pokemon-image {
   background-image: url('/assets/pokemon-index.png');

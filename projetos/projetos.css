@@ -60,6 +60,63 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   color: var(--white);
 }
 
+/* --- BOTÃO DO GITHUB NO HERO (ATUALIZADO) --- */
+.project-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Empurra o H1 para a esquerda e o botão para a direita */
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+/* Garante que o H1 não aplique a margem inferior antiga */
+.project-title-wrapper .project-detail-title {
+  margin-bottom: 0;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 52px; /* Deixa o botão bem mais "gordo" e imponente */
+  background-color: var(--dark);
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-family: 'DM Mono', monospace;
+  font-size: 30px; /* Texto maior */
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Força o ícone do SVG a crescer junto com o texto */
+.github-btn svg {
+  display: block;
+  width: 36px; 
+  height: 36px;
+  fill: currentColor;
+}
+
+.github-btn:hover {
+  transform: translateY(-4px); /* Pulo um pouquinho maior no hover */
+  background-color: var(--ink);
+  border-color: var(--white);
+}
+
+/* Ajuste para telas menores: centraliza as coisas se faltar espaço */
+@media (max-width: 600px) {
+  .project-title-wrapper {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  
+  .github-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
 .back-link {
   margin-bottom: 24px;
   font-size: 16px;
@@ -130,6 +187,10 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   width: 100%;
   aspect-ratio: 16 / 8;
   border-radius: 4px;
+}
+
+.cover-media video {
+  width: 100%;
 }
 
 /* CORPO DO TEXTO */
